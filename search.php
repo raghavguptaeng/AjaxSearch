@@ -2,7 +2,7 @@
   require_once "connection.php";
  
   if (isset($_POST['query'])) {
-      $query = "SELECT * FROM songs WHERE song_name LIKE '{$_POST['query']}%' LIMIT 100";
+      $query = "SELECT * FROM songs WHERE song_name LIKE '{$_POST['query']}%' LIMIT 1000";
       $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) > 0) {
